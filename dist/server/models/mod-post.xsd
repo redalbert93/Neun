@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Post">
+	  <xs:complexType>
+		<xs:sequence>
+		  <xs:element name="PostID" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+		  <xs:element name="Tipo">
+		  <xs:simpleType>
+		    <xs:restriction base="xs:string">
+		      <xs:enumeration value="articolo"/>
+		      <xs:enumeration value="video"/>
+		      <xs:enumeration value="album"/>
+		    </xs:restriction>
+		  </xs:simpleType>
+		</xs:element> 
+		  <xs:element name="Titolo" type="xs:string"/>
+		  <xs:element name="Autore" type="xs:string"/>
+		  <xs:element name="Contenuto" type="xs:string"/>
+		  <xs:element name="Copertina" type="xs:integer"/>
+		  <xs:element name="SearchEngineTitolo" type="xs:string"/>
+		  <xs:element name="SearchEngineDescrizione" type="xs:string"/>
+		  <xs:element name="SearchEngineKeywords" type="xs:string"/>
+		  <xs:element name="FacebookTitolo" type="xs:string"/>
+		  <xs:element name="FacebookDescrizione" type="xs:string"/>
+		  <xs:element name="FacebookImmagine" type="xs:integer"/>
+		  <xs:element name="DataDisplay" type="xs:string"/>
+		  <xs:element name="Pubblico" type="xs:boolean"/>
+		  <xs:element name="SottoTitolo" type="xs:string"/>
+		  <xs:element name="Thumbail" type="xs:integer"/>
+		  <xs:element name="Lang" type="xs:string"/>
+		  <xs:element name="Slug" type="xs:string"/>
+		  <xs:element name="PreviewTitolo" type="xs:string"/>
+		  <xs:element name="PreviewSottotitolo" type="xs:string"/>
+		  <xs:element name="DataDisplayAlternative" type="xs:string"/>
+		  <xs:element name="submit" type="xs:string"/>
+		</xs:sequence>
+	  </xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,235 @@
+@media screen and (min-width: 660px) {
+  body {
+    font-size: 1em;
+    line-height: 1.375em; }
+  .subnav {
+    margin-top: 80px; }
+  .presentation {
+    max-width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+  .right-text {
+    text-align: right; }
+  .left-text {
+    text-align: left; }
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.125em; }
+  .heading-2 {
+    font-size: 2em;
+    line-height: 1.25em; }
+  .heading-3 {
+    font-size: 1.5em;
+    line-height: 1.25em; }
+  h4 {
+    font-size: 1.125em;
+    line-height: 1.22222222em; }
+  blockquote {
+    font-size: 1.5em;
+    line-height: 1.45833333em; }
+  .nav {
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    padding: 0; }
+    .nav label {
+      display: none; }
+    .nav ul {
+      height: 100%;
+      float: left; }
+    .nav li {
+      float: left;
+      width: auto;
+      height: 80px;
+      line-height: 100%;
+      margin-left: 1.77689em;
+      display: table !important;
+      visibility: visible; }
+      .nav li a, .nav li span {
+        display: table-cell;
+        vertical-align: middle; }
+    .nav li.search {
+      float: right; }
+    .nav .logo {
+      float: left; }
+  .highlight {
+    margin-top: 80px; }
+    .highlight .heading-2 {
+      text-decoration: none; }
+  .article-square {
+    width: 50%; }
+    .article-square .heading-3, .article-square .summary > span {
+      background-color: rgba(32, 9, 12, 0.75); }
+    .article-square a {
+      margin-right: 1.333em;
+      margin-bottom: 1.333em;
+      margin-left: 0;
+      margin-top: 0; }
+  /*===================OVERRIDING MAIN ARTICLES TABLET===================*/
+  .main-articles {
+    padding-left: 1.333em;
+    width: 75%; }
+    .main-articles h1 {
+      text-align: left; }
+  .featured-articles {
+    width: 25%;
+    padding-right: 1.333em; }
+    .featured-articles h1 {
+      text-align: right; }
+    .featured-articles ul {
+      float: right;
+      padding: 0;
+      margin: 0;
+      margin-top: -0.42219em;
+      margin-bottom: 1.333em;
+      margin-right: -0.42219em; }
+    .featured-articles li {
+      float: right;
+      font-family: 'Cantarell';
+      text-transform: uppercase;
+      background: #20090c;
+      color: white;
+      padding: 0.56278em;
+      margin: 0.42219em; }
+  .popular {
+    padding-right: 0; }
+  /********************OVERRIDING ADVICES********************/
+  .advices {
+    padding-left: 1.333em; }
+    .advices > div {
+      width: 25%;
+      padding-bottom: 1.333em;
+      padding-right: 1.333em; }
+  /********************OVERRIDING MEDIA********************/
+  .media > div {
+    width: 50%; }
+  .media .article {
+    margin-top: 4.20873em; }
+  .media .summary {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    padding: 1.77689em;
+    background: rgba(32, 9, 12, 0.85); }
+  /********************OVERRIDING FOOTER********************/
+  .footer .wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; }
+  .footer .copyright {
+    width: 100%; }
+  .footer ul {
+    width: 33.33333%;
+    float: left;
+    list-style: none;
+    color: inherit; }
+  .footer .title {
+    font-size: 1.5em; }
+  /********************OVERRIDING ADVICES********************/
+  /********************OVERRIDING POST PAGE*********************/
+  .heading-article {
+    position: relative;
+    margin-top: 80px; }
+    .heading-article img {
+      width: 100%; }
+    .heading-article .summary {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center; }
+      .heading-article .summary > div {
+        height: 100%;
+        width: 100%; }
+      .heading-article .summary h1 {
+        font-size: 3em;
+        display: inline-block; }
+  /*************** Overriding Post Content ***********/
+  .post-content {
+    padding: 1.333em;
+    width: 75%; }
+    .post-content h1, .post-content h2 {
+      text-align: left; }
+    .post-content .date {
+      display: inline;
+      float: right;
+      text-align: right;
+      background: #20090c;
+      color: #33ff57;
+      padding: 0.2376em; }
+    .post-content .author {
+      text-align: left;
+      display: inline;
+      float: left; }
+  /*********** OVERRIDING PAGINA ARTICOLI ****************/
+  .searchpage .col-a, .searchpage .col-b {
+    float: left;
+    width: 50%; }
+  .searchpage .col-a {
+    padding-right: 3.15733em; }
+  .search {
+    padding-top: 3.15733em; }
+    .search .filters {
+      margin-left: auto;
+      margin-right: auto;
+      width: 480px; }
+    .search p {
+      width: 60%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto; }
+    .search input[type="text"] {
+      font-size: 1.25em;
+      padding: 1em; }
+    .search .button {
+      width: 480px;
+      margin-bottom: 1.333em;
+      margin-left: 1.333em; }
+  .authors-wrapper {
+    float: left;
+    width: 33.33333%; }
+  .authors-content {
+    float: left;
+    width: 66.66667%;
+    padding-left: 1.333em; }
+    .authors-content h2 {
+      margin-top: 0; }
+  .users_list {
+    padding-left: 1.333em; }
+  .articles-popular {
+    padding-left: 1.333em; }
+  .articles-popular .article-square {
+    width: 33.33333%; }
+  .byusers {
+    width: 50%; }
+    .byusers:last-child {
+      display: none; }
+  .compress .highlight {
+    margin-top: 0;
+    width: 66.66667%;
+    clear: float;
+    margin-left: auto;
+    margin-right: auto; }
+  /*************** OVERRIDING STILI PAGINA CONTATTI ***********/
+  .contacts-left, .contacts-right {
+    width: 50%; }
+    .contacts-left a, .contacts-right a {
+      text-decoration: underline; }
+  .post-content-form form {
+    width: 66.66667%; }
+  .post-content-form span {
+    display: block; }
+  .post-content-form .help {
+    width: 33.33333%;
+    padding-left: 1.77689em;
+    margin-top: 0; }
+  .dashboard .containerAltriPost {
+    width: 50%; }
+  .results {
+    padding-left: 0; } }

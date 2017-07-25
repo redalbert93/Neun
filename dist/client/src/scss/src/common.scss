@@ -1,0 +1,1188 @@
+@import '../variables';
+@import '../utils/reset';
+@import './../bourbon/_bourbon.scss';
+
+
+/*************** DEFINIZIONE FONTS ESTERNI *****************/
+
+@include font-face("Asap", "./../fonts/Asap/Asap-Regular", normal, $file-formats: ttf);
+@include font-face("Asap", "./../fonts/Asap/Asap-Medium", bold, $file-formats: ttf);
+@include font-face("Cantarell", "./../fonts/Cantarell/Cantarell-Regular", normal, $file-formats: ttf);
+@include font-face("Cantarell", "./../fonts/Cantarell/Cantarell-Bold", bold, $file-formats: ttf);
+@include font-face("Fjalla", "./../fonts/Fjalla_One/FjallaOne-Regular", normal, $file-formats: ttf);
+
+
+/************** MOBILE TEXT STYLING (all are overrided)**************/
+html {
+	height: 100%;
+}
+
+//DESIGN FOR MOBILE FIRST (SPEEDNDESS)
+body {
+	height: 100%;
+	font-size: 1em;
+	line-height: 1.25em;
+	font-family: Asap;
+	text-align: center;
+}
+
+/************** COMMON STYLES AND UTILS **************/
+
+//As recommended by: http://webaim.org/techniques/css/invisiblecontent/
+.invisible {
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+
+strong {
+	font-weight: bold;
+}
+
+p {
+	text-align: left;
+}
+
+.toggle {
+   display:none;
+}
+
+/* Toggled State */
+.toggle:checked ~ div {
+	display: block;
+}
+
+
+.toggle ~ div {
+	display: none;
+}
+
+.toggle ~ label {
+	text-decoration: none;
+}
+
+
+.danger {
+	color: red;
+}
+
+
+.button {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: modular-scale(1);
+	margin-top: modular-scale(-4);
+	padding: modular-scale(1);
+
+
+	border-radius: 3px;
+	cursor: pointer;
+	background: $black;
+	color: $green;
+	
+	@include transition(background 0.2s ease-in);
+
+	&:hover {
+		background: lighten($black, 10%);
+	}
+}
+
+.right-text {
+	text-align: center;
+}
+
+.left-text {
+	text-align: center;
+}
+
+.hidden {
+	display: none;
+}
+
+.center-text {
+	text-align: center;
+}
+
+h1 {
+	font-size: 2em;
+	line-height: 1.25em;
+}
+
+.heading-2 {
+	font-size: 1.5em;
+	line-height: 1.15384615em;
+	display:block;
+	margin: modular-scale(2);
+	font-weight: bold;
+}
+
+.heading-3 {
+	font-size: 1.375em;
+	line-height: 1.13636364em;
+	display:block;
+	margin: modular-scale(1);
+	font-weight: bold;
+}
+
+.heading-3d {
+	font-size: 1.75em;
+	line-height: 1.25em;
+	margin: modular-scale(1);
+	font-weight: bold;
+	display:block;
+}
+
+h4 {
+	font-size: 1.125em;
+	line-height: 1.11111111em;
+}
+
+blockquote {
+	font-size: 1.25em;
+	line-height: 1.25em;
+}
+
+.wrap {
+	display: table;
+}
+
+.valign {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+input[type="text"] {
+	width: 100%;
+	margin-top: modular-scale(1);
+	margin-bottom: modular-scale(1);
+	height: 40px;
+	line-height: 40px;
+}
+
+input[type="submit"] {
+	border: 0;
+}
+
+textarea {
+		width: 100%;
+		height: 300px;
+		padding:modular-scale(-1);
+		font-size:1.1em;
+		font-family: Asap;
+		border-radius: 3px;
+		border: 1px solid $black;
+		margin-top: modular-scale(0);
+		max-width: 100%;
+	}
+
+
+/*************** NAV STYLING (DEFAULT SECTION) *****************/
+.nav {
+	position: relative;
+	overflow: hidden;
+
+	background: $black;
+
+	padding-top: modular-scale(0);
+	padding-bottom: modular-scale(0);
+
+
+	input[type=checkbox] {
+		position: absolute;
+    top: -9999px;
+    left: -9999px;
+	}
+
+	label {
+		position: absolute;
+		left: modular-scale(-1);
+		color: white;
+		font-size:40px;
+		line-height: 40px;
+	}
+
+	input[type=checkbox]:checked ~ ul > li {
+		display: block;
+	}
+
+	.logo {
+		padding-left: modular-scale(1);
+		padding-top: $header-height/4;
+		img {
+			max-height: $header-height/2;
+		}
+	}
+
+	ul {
+		height: auto;
+		margin-top: 0;
+		margin-bottom:0;
+	 	-webkit-padding-start: 0;
+	 	-webkit-margin-before: 0em;
+		-webkit-margin-after: 0em;
+	}
+
+	li {
+		width:100%;
+		display: none;
+		line-height: $header-height/2 + 10;
+		background: inherit;
+		//font styling
+		text-transform: uppercase;
+		font-family: 'Cantarell';
+		font-weight: bolder;
+	}
+
+	.active a {
+		text-decoration: underline;
+		color: $green;
+	}
+}
+
+
+/*************** SECTION STYLING (DEFAULT SECTION) *****************/
+.section {
+	max-width: 100%;
+	overflow: hidden;
+
+	h1 {
+		font-family: Fjalla;
+	}
+}
+
+
+/*************** DEFAULT A STYLING *****************/
+a {
+	color: white;
+
+	@include transition(color 0.2s ease-in);
+
+	&:hover {
+		color: $green;
+	}
+
+	&:focus {
+		color: $green;
+	}
+
+	&:visited {
+		color: orange !important;
+	}
+}
+
+/*************** STILI BASE ARTICOLO IN EVIDENZA ***********/
+.highlight {
+
+	width: 100%;
+	position: relative;
+	margin-left: 0;
+	margin-right: 0;
+
+	img {
+		width: 100%;
+	}
+
+	a {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+
+	h1 {
+		position: absolute;
+		margin-top: 0;
+		padding: modular-scale(-4);
+		top: 0;
+		right: 0;
+		background: $green;
+	}
+
+	.heading-2 {
+		text-align: center;
+		
+		margin-bottom: 0;
+
+		
+		& > span {
+			display: inline-block;
+			text-decoration: underline;
+			padding: modular-scale(-3);
+			background: $black;
+		}
+		text-decoration: underline;
+		
+	}
+
+	.heading-2 {
+		margin-top: 0;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+}
+
+
+/*************** WIDGET SQUARE ARTICLE *****************/
+
+.article-square {
+
+	width: 100%;
+	float: left;
+
+	img {
+		width: 100%;
+	}
+
+	.heading-3, .summary > span {
+		margin-left: modular-scale(0);
+		margin-right: modular-scale(0);
+		display: inline-block;
+		min-width: 51%;
+		padding: modular-scale(-3);
+
+		background-color: rgba($black, 1);
+
+		font-family: $font-main;
+		color: inherit;
+		
+		@include transition(background 0.2s ease-in);
+	}
+
+	&:hover .heading-3 {
+		background-color: rgba($black, 1);
+	}
+
+	&:hover .summary span {
+		background-color: rgba($black, 1);
+	}
+
+	& > a:focus .heading-3 {
+		background-color: rgba($black, 1);
+	}
+
+	& > a:visited .heading-3 {
+		color: orange;
+		background-color: rgba($black, 1) !important;
+	}
+
+	& > a:visited .summary span {
+		color: orange;
+		background-color: rgba($black, 1);
+	}
+
+
+	& > a:focus .summary span {
+		background: rgba($black, 1);
+	}
+
+	& > a:active .heading-3 {
+		background-color: rgba($black, 0.75);
+		color: lighten($green, 35%);
+		transition: none;
+	}
+
+	& > a:active .summary span {
+		background: rgba($black, 0.75);
+		color: lighten($green, 35%);
+		transition: none;
+	}
+
+	a {
+		display:block;
+		position: relative;
+		margin: modular-scale(-1);
+		margin-bottom: 0;
+	}
+
+	.summary {
+		display: block;
+		width: 100%;
+		color: inherit;
+		//positioning
+		position:absolute;
+		bottom: modular-scale(-1);
+		left: 0;
+		// padding-left: modular-scale(0);
+		padding-right: 0; 
+		//text-styliing
+	}
+}
+
+#articoli {
+	//set right height
+	overflow:hidden;
+}
+
+#pagination {
+	display: none;
+}
+
+
+
+.main-articles {
+	float:left;
+	width: 100%;
+	padding-bottom: modular-scale(3);
+
+	span {
+		text-decoration: underline;
+	}
+}
+
+
+.presentation {
+
+	padding-left: modular-scale(0);
+	padding-right: modular-scale(0); 
+
+	text-align: center;
+
+	a {
+		color: black;
+		text-decoration: underline;
+
+		&:hover {
+			color: $black;
+		}
+	}
+}
+
+/*************** STILI BASE COLONNA DESTRA *****************/
+.featured-articles {
+
+	float:left;
+	width: 100%;
+
+	ul {
+		width: 100%;
+		list-style: none;
+		list-style-type: none;
+		-webkit-padding-start: 0;
+		margin-top: modular-scale(-1);
+		margin-bottom: modular-scale(-1);
+		margin-right: modular-scale(-1) * -1;
+	}
+
+	li {
+		display: inline-block;
+		font-family: 'Cantarell';
+		text-transform: uppercase;
+		background: $black;
+		padding: modular-scale(-2);
+		margin: modular-scale(-3);
+
+		a {
+			color: white;
+			text-decoration: none;
+			@include transition(color 0.2s ease-in);
+
+			&:hover {
+				color: $green_smooth;
+				text-decoration: underline;
+			}
+
+			&:active, &:focus {
+				color: $green;
+				transition: none;
+			}
+		}
+	}
+}
+
+//===================POST POPOLARI. > featured-articles===================
+.popular {
+
+	padding-right: modular-scale(-1);
+	padding-left: modular-scale(-1);
+	padding-bottom: modular-scale(-1);
+
+	.article {
+		width: percentage(1);
+		float: left;
+		margin-bottom: modular-scale(-1);
+		border-bottom: 1px dashed $black;
+	}
+
+	a {color: black;}
+
+	img {
+		width: percentage(1);
+		margin-bottom: modular-scale(-1);
+	}
+
+
+	.summary {
+		display: block;
+		width: percentage(1);
+		padding-bottom: modular-scale(0);
+
+		& > span {
+			font-weight: bold;
+    }
+	}
+
+}
+
+
+//=====================STILI BASE FOOTER=====================
+.footer {
+
+	background: $black;
+	overflow: hidden;
+	color: white;
+	padding-top: modular-scale(4);
+	
+
+	.logo img {
+		max-height: 60px;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	li {
+		padding: modular-scale(-2);
+	}
+
+	.userAuth {
+		font-size: 1.2em;
+
+		strong {
+			color: $green;
+			font-size: 1.25em;
+		}
+	}
+
+	.title {
+		font-family: Fjalla;
+		font-size: 1.5em;
+		text-transform: uppercase;
+		color: $green-smooth;
+	}
+
+	.wrapper {
+		margin-top: modular-scale(2);
+		margin-bottom: modular-scale(2);
+		overflow: hidden;
+	}
+
+
+	.copyright {
+
+		width: 100%;
+		padding-top: modular-scale(1);
+		padding-bottom: modular-scale(1);
+		background: lighten($black, 5%);
+
+	}
+}
+
+
+
+/****************STILI PAGINA POST*******************/
+.post-content {
+	padding:modular-scale(-1);
+	font-size: 1.1em;
+}
+
+.post-aside {
+	padding:modular-scale(-1);
+}
+
+
+
+/*************** STILI BASE HEADING ARTICOLO IN EVIDENZA ***********/
+.post-content {
+	text-align: left;
+
+	img {
+		max-width: 100%;
+	}
+
+	h1 {margin-top: 0;}
+	h1,h2 {text-align:center;}
+
+	.post-metadata {
+		overflow: hidden;
+	}
+
+	.author, .date {
+		text-align: center;
+		font-family: Fjalla;
+		font-size: 1.25em;
+	}
+
+	//Post things
+	.post {
+		h2,h3,h4 {
+			font-family: Fjalla;
+		}
+	}
+
+	p {line-height: 1.5em;
+
+		
+	}
+	a {color: $black;  text-decoration: underline;}
+}
+
+/*************** STILI BASE HEADING ARTICOLO IN EVIDENZA ***********/
+.heading-article {
+
+	width: 100%;
+
+	img {
+		width: 100%;
+	}
+
+	.summary {
+		text-align: center;
+		
+		& > div {
+			height: 100%;
+			width: 100%;
+		}
+
+		h1 {
+			display: none;
+			margin: 0;
+			padding: modular-scale(-4);
+			color: $green;
+			background: $black;
+		}
+
+		h2 {
+			background: rgba($black, 0.95);
+			padding: modular-scale(-4);
+			color: white;
+			font-weight: lighter;
+		}
+	}
+}
+
+/*************** STILI PAGINA ARTICOLI ***********/
+.results {
+	h1, h2 {
+		margin-top: 0;
+		text-align: left;
+	}
+
+	padding: modular-scale(1);
+
+	float: left;
+	overflow: hidden;
+	width: percentage(1);
+}
+
+.searchpage {
+	.col-a, .col-b  {
+		float:left;
+		overflow:hidden;
+		width: percentage(1);
+	}
+
+	.col-a {
+		padding-right: 0;
+
+	}
+
+	.col-b {
+		padding: modular-scale(1);
+		h1 {
+			text-align: left;
+		}
+
+		.heading-2 {
+			font-size: 18px !important;
+		}
+	}
+}
+
+.search {
+
+	text-align: left;
+
+	h1, h2 {
+		margin: 0;
+	}
+
+	p {text-align: left; margin-left: 0 !important;}
+	padding: modular-scale(1);
+
+	label {
+		display:block;
+		margin-left: 0;
+		padding-left: 0;
+		cursor: pointer;
+		font-weight: bold;
+		margin-bottom: 0;
+	}
+
+	input[type="text"] {
+		margin-bottom:0;
+		width: 100%;
+	}
+
+	input[type="submit"] {
+		border: 0;
+		margin-left:0;
+		width: 100%;
+		margin-bottom:0;
+
+	}
+
+	.filters {
+
+		text-align: left; 
+		margin-left: 0 !important;
+
+		h2 {
+			font-family: Cantarell;
+			font-weight: lighter;
+		}
+
+		label {display:inline; padding-left: 15px}
+
+		.underline {
+			text-decoration: underline;
+			margin-left: 0;
+			padding-left: 0;
+		} 
+		cursor: pointer; 
+		padding: modular-scale(-1); 
+		& > div > div {
+			text-align: left; 
+			padding-top: modular-scale(-4); 
+			padding-bottom: modular-scale(-4); 
+		}
+	}
+
+	.button {
+		width: 100%;
+		margin-bottom: modular-scale(1);
+		border-radius: 0;
+		font-size: 1em;
+	}
+
+	.compress {
+		.highlight {
+			margin-top: 0;
+	
+		}
+	}
+}
+
+.authors-content {
+	.center-text a {color: black;text-decoration: underline;}
+
+
+	h2 {
+		font-weight: lighter;
+
+		span {
+			font-weight: bold;
+			font-family: Cantarell;
+		}
+	}
+
+}
+
+.byusers {
+	width: percentage(1/3);
+}
+
+.authors {
+	list-style: none;
+	padding-left: 0 !important;
+
+
+	li {
+		background: $black;
+		padding: modular-scale(-1);
+		color: $green;
+		border-bottom: 1px dashed $green_smooth;
+		
+		label{cursor: pointer;}
+
+		&:hover {
+			color: white;
+		}
+
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+}
+
+
+/*************** STILI PAGINA CONTATTI ***********/
+.contacts-left, .contacts-right  {
+	padding: modular-scale(1);
+	float: left;
+	width: percentage(1);
+	text-align: left;
+
+	textarea {height:150px;}
+
+	h2,h3 {
+		font-family: Fjalla;
+	}
+}
+
+.contacts-left {
+
+
+
+	label {
+		font-weight: bold;
+		display: block;
+		padding: modular-scale(-4);
+	}
+
+	input[type=text] {
+		margin-bottom: modular-scale(1);
+		padding: modular-scale(-4);
+	}
+
+
+}
+
+.contacts-right {
+	ul {list-style: none; padding: 0;}
+	li {span {font-weight: bold;} a {color: black;}}
+}
+
+
+/************* Alerts ******************/
+.alert {
+	padding: modular-scale(-1);
+	margin-top: modular-scale(-1);
+	margin-bottom: modular-scale(-1);
+	border-radius: 3px;
+}
+
+.danger {
+	border: 1px solid lighten($black, 40%);
+	background: lighten($black, 70%);
+	color: $black;
+}
+
+.button.danger:hover {
+	background: lighten($black, 60%);
+}
+
+.button.success:hover {
+	background: lighten($green, 30%);
+}
+
+.success {
+	border: 1px solid darken($green, 40%);
+	background: lighten($green, 35%);
+	color: $black;
+}
+
+
+
+/************* PAGINA LOGIN ******************/
+.login-box {
+	height:100%;
+	width: 100%;
+	text-align: center;
+	display: table;
+	background: $black;
+
+	a {
+		text-decoration: underline;
+	}
+
+	.logo {
+		padding-top: $header-height/4;
+		img {
+			max-height: 60px;
+		}
+	}
+}
+
+.login-form {
+	padding: modular-scale(1);
+	display: table-cell;
+	vertical-align: middle;
+
+	.small-footer {
+
+		width: 100%;
+		max-width: 450px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		color: $green;
+		margin-top: modular-scale(1);
+
+		a {
+			font-weight: 'lighter';
+			color: $green;
+			font-size: 1.1em;
+			font-family: 'Asap';
+			padding: modular-scale(0);
+		}
+
+	}
+
+
+	form {
+
+		legend {font-size: 1.5em;}
+
+		background: white;
+		border-radius: 3px;
+
+		width: 100%;
+		max-width: 450px;
+		color: $black;
+		text-align: left;
+		padding: modular-scale(1);
+		margin-top: modular-scale(3);
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+
+		fieldset {
+			padding-top: modular-scale(1);
+			
+			padding-left: modular-scale(1);
+			border-color: $black;
+		}
+
+		label {
+			font-size: 1.1em;
+			font-weight: bold;
+		}
+
+		span {
+			display:block;
+		}
+
+		input[type="text"], input[type="password"] {
+			width: 100%;
+			margin-top: modular-scale(1);
+			margin-bottom: modular-scale(1);
+			height: 40px;
+			line-height: 40px;
+		}
+
+		input[type="submit"] {
+			border: 0;
+			float: right;
+			margin-right: 0;
+		}
+
+		#loginInfo {
+			margin-bottom: modular-scale(1);
+		}
+	}
+
+}
+
+/************* post-content-form ******************/
+
+.post-content-form {
+	text-align: left;
+	padding: modular-scale(1);
+
+	input[type="submit"] {
+		border: 0;
+	}
+
+	a {color: $black; text-decoration: underline;}
+
+	h2 {
+		margin-top: 0;
+		font-family: Fjalla;
+	}
+
+
+	fieldset {border: 0; padding: 0;}
+
+	label {
+			font-weight: bold;
+			font-size: 1.2em;
+		}
+
+	form {
+		width: percentage(1);
+		float:left;
+	}
+
+	.help {
+		float:left;
+		width: percentage(1);
+		margin-top: modular-scale(1);
+
+		.post-content {
+			padding: 0;
+			margin-top: modular-scale(1);
+			text-align: left;
+		}
+		
+		text-align: left;
+
+		ul {
+			list-style: none;
+			padding: 0;
+		}
+
+		li {
+			border-bottom: 1px solid $black;
+			padding: 10px;
+			h1,h2,h3,h4 {
+				text-align: left;
+				margin: 0;
+			}
+		}
+
+
+	}
+}
+
+.preview {
+	padding: modular-scale(1);
+	border: 2px solid $black;
+	margin: modular-scale(1);
+	margin-left: 0;
+	background-color: lighten(#ddd, 10%);
+}
+
+/************* COMMENTS ******************/
+.comments {
+
+	border-top: 3px solid $black;
+	background: lighten($black, 90%);
+	padding: modular-scale(-1);
+
+	h2 {
+		font-family: Fjalla;
+	}
+
+	overflow: hidden;
+
+	.date {
+		font-size: 0.75em;
+	}
+
+	.heading {
+		overflow: hidden;
+		padding-bottom: modular-scale(-1);
+	}
+
+	.author {
+		margin-top: 3px;
+		font-size: 1.3em;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	.content {
+		display:block;
+		width: 100%;
+		font-family: Asap;
+	}
+
+	ul {
+		width: 100%;
+		list-style: none;
+		padding-left: 0;
+	}
+
+	label {
+		font-family: Fjalla;
+		margin-top: modular-scale(1);
+		display: block;
+	}
+
+	li {
+		padding-top: modular-scale(-1);
+		padding-bottom: modular-scale(-1);
+		border-bottom: 1px solid $black;
+	}
+
+	fieldset {
+		border: 0;
+		padding: 0;
+	}
+
+
+	form > div {
+		width: 100%;
+	}
+
+
+	input[type="submit"] {
+			border: 0;
+			float: left;
+			margin-right: 0;
+			float:none;	
+		}
+}
+
+.dashboard {
+	padding: modular-scale(2);
+	text-align: left;
+
+	dt {
+		font-weight: bold;
+	}
+
+	a {
+		text-decoration: underline;
+		color: $black;
+
+	}
+
+	.submenu {
+
+		
+
+		list-style: none;
+		overflow: hidden;
+		padding-left: 0;
+
+		li {
+			float:left;
+			padding-right: modular-scale(-1);
+		}
+
+		.active {
+			text-decoration: underline;
+			background: $black;
+			color: $green;
+		}
+
+		
+	}
+
+	.newPost {
+		.button {
+			margin: modular-scale(1);
+			margin-left: 0;
+			color: $green;
+		}
+	}
+
+	.containerAltriPost {
+		float: left;
+		width: percentage(1);
+		border: 1px solid $black;
+		padding: modular-scale(1);
+		height: 375px;
+	}
+}
+
+
+
+
+
+	

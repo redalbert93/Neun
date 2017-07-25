@@ -1,0 +1,206 @@
+//Stili per i devices desktop
+@import './../bourbon/_bourbon.scss';
+@import '../variables.scss';
+
+@media screen and (min-width: $desktop-min-width) {
+
+	body {
+		font-size: 1em;
+		line-height: 1.375em;
+	}
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	h1 {
+		font-size: 3em;
+		line-height: 1.05em;
+	}
+
+	.heading-2 {
+		font-size: 2.25em;
+		line-height: 1.25em;
+	}
+
+	.heading-3 {
+		font-size: 1.75em;
+		line-height: 1.25em;
+	}
+
+	h4 {
+		font-size: 1.125em;
+		line-height: 1.22222222em;
+	}
+
+	blockquote {
+		font-size: 1.5em;
+		line-height: 1.45833333em;
+	}
+
+	.article-square {
+		width: percentage(1/3);
+
+		a {
+			margin-bottom: modular-scale(2);
+			margin-right: modular-scale(2);
+			margin-left: 0;
+			margin-top: 0;
+		}
+	}
+
+	/*===================OVERRIDING MAIN ARTICLES DESKTOP===================*/
+	.main-articles {
+		padding-left: modular-scale(2);
+
+		span {
+			text-decoration: none;
+		}
+	}
+
+	.featured-articles {
+		width: percentage(1/4);
+		padding-right: modular-scale(2);
+		padding-left: modular-scale(2);
+
+		h1 {
+			text-align: right;
+		}
+
+		ul {
+			float: right;
+			padding: 0;
+			margin: 0;
+			margin-top: modular-scale(-3)*-1;
+			margin-bottom: modular-scale(2);
+			margin-right: modular-scale(-3)*-1;
+		}
+
+		li {
+			float: right;
+			font-family: 'Cantarell';
+			text-transform: uppercase;
+			background: $black;
+			color: white;
+			padding: modular-scale(-2);
+			margin: modular-scale(-3);
+
+		}
+	}
+
+	.popular {
+		padding-right: 0;
+	}
+
+	/********************OVERRIDING ADVICES********************/
+
+	.advices {
+
+		padding-left: modular-scale(2); 
+
+		& > div {
+			width: percentage(1/6);
+			padding-bottom: modular-scale(2);
+			padding-right: modular-scale(2);
+		}
+	}
+
+	.footer {
+
+
+		.title {
+			font-size: 1.75em;
+		}
+
+		.copyright {a {text-decoration: underline;}}
+	}
+
+
+
+	/********************OVERRIDING POST PAGE*********************/
+
+	.heading-article {
+
+		.summary {
+			h1 {
+				font-size: 4em;
+			}
+		}
+	}
+
+	.post-content {
+			width:percentage(2/3);
+			padding:modular-scale(2);
+	}
+
+	.articles-popular .article-square {
+		width: percentage(1/4);
+	}
+
+	.authors-content .article-square {
+		padding-top: modular-scale(4);
+	}
+
+	.articles-popular {
+		padding-left: modular-scale(1);
+	}
+
+	.users_list {
+		padding-left: modular-scale(2);
+	}
+
+	.byusers {
+		&:last-child {
+			display:block;
+		}
+	}
+
+	.compress {
+		.highlight {
+			margin-top: 0;
+			width: percentage(1/2);
+			float: left;
+		}
+	}
+
+	.dashboard {
+		.containerAltriPost {
+			width: percentage(1/3);
+		}
+	}
+	
+}
+
+
+
+
+
+
+@media screen and (min-width: $view-max-width) {
+
+	.section {
+		max-width: $view-max-width;
+		margin-left: auto;
+		margin-right: auto;
+		border-left: 1px solid $black;
+		border-right: 1px solid $black; 
+	}
+
+	.nav {
+		width: $view-max-width;
+		left: 50%;
+		margin-left: $view-max-width/-2;
+	}
+
+	.footer {
+		width: $view-max-width;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+
+}

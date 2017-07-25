@@ -1,0 +1,107 @@
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1em;
+    line-height: 1.375em; }
+  a {
+    text-decoration: none; }
+    a:hover {
+      text-decoration: underline; }
+  h1 {
+    font-size: 3em;
+    line-height: 1.05em; }
+  .heading-2 {
+    font-size: 2.25em;
+    line-height: 1.25em; }
+  .heading-3 {
+    font-size: 1.75em;
+    line-height: 1.25em; }
+  h4 {
+    font-size: 1.125em;
+    line-height: 1.22222222em; }
+  blockquote {
+    font-size: 1.5em;
+    line-height: 1.45833333em; }
+  .article-square {
+    width: 33.33333%; }
+    .article-square a {
+      margin-bottom: 1.77689em;
+      margin-right: 1.77689em;
+      margin-left: 0;
+      margin-top: 0; }
+  /*===================OVERRIDING MAIN ARTICLES DESKTOP===================*/
+  .main-articles {
+    padding-left: 1.77689em; }
+    .main-articles span {
+      text-decoration: none; }
+  .featured-articles {
+    width: 25%;
+    padding-right: 1.77689em;
+    padding-left: 1.77689em; }
+    .featured-articles h1 {
+      text-align: right; }
+    .featured-articles ul {
+      float: right;
+      padding: 0;
+      margin: 0;
+      margin-top: -0.42219em;
+      margin-bottom: 1.77689em;
+      margin-right: -0.42219em; }
+    .featured-articles li {
+      float: right;
+      font-family: 'Cantarell';
+      text-transform: uppercase;
+      background: #20090c;
+      color: white;
+      padding: 0.56278em;
+      margin: 0.42219em; }
+  .popular {
+    padding-right: 0; }
+  /********************OVERRIDING ADVICES********************/
+  .advices {
+    padding-left: 1.77689em; }
+    .advices > div {
+      width: 16.66667%;
+      padding-bottom: 1.77689em;
+      padding-right: 1.77689em; }
+  .footer .title {
+    font-size: 1.75em; }
+  .footer .copyright a {
+    text-decoration: underline; }
+  /********************OVERRIDING POST PAGE*********************/
+  .heading-article .summary h1 {
+    font-size: 4em; }
+  .post-content {
+    width: 66.66667%;
+    padding: 1.77689em; }
+  .articles-popular .article-square {
+    width: 25%; }
+  .authors-content .article-square {
+    padding-top: 3.15733em; }
+  .articles-popular {
+    padding-left: 1.333em; }
+  .users_list {
+    padding-left: 1.77689em; }
+  .byusers:last-child {
+    display: block; }
+  .compress .highlight {
+    margin-top: 0;
+    width: 50%;
+    float: left; }
+  .dashboard .containerAltriPost {
+    width: 33.33333%; } }
+
+@media screen and (min-width: 1260px) {
+  .section {
+    max-width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 1px solid #20090c;
+    border-right: 1px solid #20090c; }
+  .nav {
+    width: 1260px;
+    left: 50%;
+    margin-left: -630px; }
+  .footer {
+    width: 1260px;
+    margin-left: auto;
+    margin-right: auto; } }

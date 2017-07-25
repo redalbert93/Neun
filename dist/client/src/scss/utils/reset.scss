@@ -1,0 +1,222 @@
+/*
+* Lo scopo di queste clausole css è quello di rendere il comportamento di alcuni tag consistenti
+* in browser differenti, in quanto esistono alcune inconsistenze tra i vari browser che possono 
+* portare a comportamenti non aspettati. 
+* 
+*/
+
+/**
+ * 1. Correzione dell'altezza della linea nei vari browser.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 2 */
+  -ms-text-size-adjust: 100%; /* 3 */
+  -webkit-text-size-adjust: 100%; /* 3 */
+}
+
+* {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+/**
+ * Rimuove i margini in tutti i browser. (alcuni utilizzano un margine di default);
+*/
+body {
+  margin: 0;
+}
+
+/**
+ * Corregge il display dei tag HTML5 nelle versione precedenti a IE 9, esplicitando il display block
+ */
+
+article,
+aside,
+footer,
+header,
+figcaption,
+figure,
+main,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Aggiunge margine corretto in IE 8.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+
+/**
+ * 1. Corretto box-sizing in firefox
+ * 2. Mostra Overflow in Edge e internet explorer
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Rimuove lo sfondo grigio nei link attivi in IE 10.
+ * 2. Rimuove il gap nel link sottolineati in iOS 8+ e Safari 8+.
+ */
+
+a {
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
+}
+
+/**
+ * Rimuove la lina esterna nei link evidenziati quando sono anche attivi o vi è presente il cursore
+ */
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/*Impedisce la duplicazione del grassetto in Safari 6*/
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Rimuove il bordo nelle immagini figle di link in IE 10-.
+ */
+
+img {
+  border-style: none;
+}
+
+//Rimuove il margine in Firefox and Safari.
+button,
+input,
+select,
+textarea {
+  margin: 0; /* 2 */
+}
+
+//Rimuove l'ereditarietà di text-transofrm in Edge, Firefox, e IE
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Corregge l'impossibilità di assegnare stili a tipi cliccabili in IOS e Safari
+ */
+
+button,
+html [type="button"], /* 1 */
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+}
+
+/**
+ * Rimuove bordo interno e padding in Firefox
+*/
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Ripristina gli stili rimossi dalla clausola precendte quando l'elemento è selezionato
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+
+/**
+ * 1. Corregge l'incapsulamento del testo in Edge e IE.
+ * 2. Corregge l'eredeitarietà del colore da elementi `fieldset` in IE.
+ * 3. Rimuove il padding di default (inconsistente tra i vari browsers).
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Rimuove la scroll bar vertical (default in IE)
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Correzzione box-sizing in IE 10-.
+ * 2. Rimozione padding in IE 10-.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Corregge lo stile del cursore per incrementare e decrementare in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Corregge l'inusuale stile di visualizzazione in Chrome and Safari.
+ * 2. Correct lo stile della linea esterna in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove il padding interno in Chrome e Safari su macOS.
+ */
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+
+/* Nascosto
+   ========================================================================== */
+
+/**
+ * Aggiunge il display corretto in IE 10-.
+ */
+
+// [hidden] {
+//   display: none;
+// }
